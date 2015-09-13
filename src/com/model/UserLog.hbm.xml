@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+   <class name="com.model.UserLog" table="userlog" catalog="crm">
+        <id name="logID" type="java.lang.Integer">
+            <column name="logID" />
+            <generator class="native" />
+        </id>
+        
+        <property name="userID" type="java.lang.Integer">
+            <column name="userID" length="15"/>
+        </property>
+        
+        <property name="userName" type="java.lang.String">
+            <column name="userName" length="25" />
+        </property>
+        
+        <property name="logDate" type="java.sql.Timestamp">
+            <column name="logDate" length="15" />
+        </property>
+        
+         <property name="ip" type="java.lang.String">
+            <column name="ip" length="25" />
+         </property>
+         
+         <property name="modelName" type="java.lang.String">
+            <column name="modelName" length="25" />
+         </property>
+         
+         <property name="executeResult" type="java.lang.String">
+            <column name="executeResult" length="25" />
+         </property>
+      </class>
+</hibernate-mapping>

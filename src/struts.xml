@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC   
+     "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"   
+     "http://struts.apache.org/dtds/struts-2.0.dtd">
+     
+     
+<struts>
+    <package name="crm" extends="struts-default">
+        <global-results>
+            <result name="succeed">/common/succeed.jsp</result>
+            <result name="msg">/common/msg.jsp</result>
+        </global-results>
+        
+        <action name="upload" class="com.util.upload" method="upload">
+             <result name="success">/upload/upload_re.jsp</result>
+        </action>
+        <action name="userReg" class="userAction" method="userReg">
+            <result name="success">/admin/login.jsp</result>
+        </action>
+        <action name="userlogin" class="userAction" method="userlogin">
+        </action>
+        <action name="userLogout" class="userAction" method="userLogout">
+           <result name="success">/admin/login.jsp</result>
+        </action>
+        <action name="userManage" class="userAction" method="userManage">
+           <result name="success">/admin/userList.jsp</result>
+        </action>
+        <action name="userAdd" class="userAction" method="userAdd">
+        </action>
+        <action name="userDel" class="userAction" method="userDel">
+        </action>
+        <action name="userEdit" class="userAction" method="userEdit">
+        </action>
+        <action name="userlizhi" class="userAction" method="userlizhi">
+        </action>
+        
+        <action name="userDetail" class="userAction" method="userDetail">
+            <result name="success">/admin/userEdit.jsp</result>
+        </action>
+       
+         <action name="getUserLog" class="userAction" method="getUserLog">
+            <result name="success">/admin/userLogList.jsp</result>
+        </action>
+       
+        <action name="jobManage" class="jobAction" method="jobManage">
+            <result name="success">/admin/jobList.jsp</result>
+        </action>
+        <action name="jobDel" class="jobAction" method="jobDel">
+        </action>
+        <action name="jobAdd" class="jobAction" method="jobAdd">
+        </action>
+        <action name="jobEdit" class="jobAction" method="jobEdit">
+        </action>
+        <action name="jobDetail" class="jobAction" method="jobDetail">
+            <result name="success">/admin/jobEdit.jsp</result>
+        </action>
+         <action name="getAllAvaiableJob" class="jobAction" method="getAllAvaiableJob">
+        </action> 
+        
+        
+        
+        <action name="geniusManage" class="geniusAction" method="geniusManage">
+            <result name="success">/admin/geniusList.jsp</result>
+        </action>
+        <action name="geniusDel" class="geniusAction" method="geniusDel">
+        </action>
+        <action name="geniusAdd" class="geniusAction" method="geniusAdd">
+        </action>
+        <action name="geniusEdit" class="geniusAction" method="geniusEdit">
+        </action>
+        
+        <action name="geniusDetail" class="geniusAction" method="geniusDetail">
+           <result name="success">/admin/geniusEdit.jsp</result>
+        </action>
+           
+         
+        <action name="empManage" class="empAction" method="empManage">
+            <result name="success">/admin/empList.jsp</result>
+        </action>
+        <action name="empDel" class="empAction" method="empDel">
+        </action>
+        <action name="empAdd" class="empAction" method="empAdd">
+        </action>
+        <action name="empDetail" class="empAction" method="empDetail">
+           <result name="success">/admin/empEdit.jsp</result>
+        </action>
+        <action name="empEdit" class="empAction" method="empEdit">
+           <result name="success">/admin/empEdit.jsp</result>
+        </action>
+        
+        <action name="empShenpi" class="empAction" method="empShenpi">
+        </action>
+        <action name="getAllAvaiableUser" class="empAction" method="getAllAvaiableUser">
+        </action>
+      
+      
+      
+        
+         <action name="deptManage" class="deptAction" method="deptManage">
+            <result name="success">/admin/deptList.jsp</result>
+        </action>
+        <action name="deptDel" class="deptAction" method="deptDel">
+        </action>
+        <action name="deptAdd" class="deptAction" method="deptAdd">
+        </action>
+        <action name="deptEdit" class="deptAction" method="deptEdit">
+        </action>
+        <action name="getAllAvaiableDept" class="deptAction" method="getAllAvaiableDept">
+        </action> 
+         
+        <action name="deptDetail" class="deptAction" method="deptDetail">
+           <result name="success">/admin/deptEdit.jsp</result>
+        </action> 
+         
+         
+        <action name="contractManage" class="contractAction" method="contractManage">
+            <result name="success">/admin/contractList.jsp</result>
+        </action>
+        <action name="contractDel" class="contractAction" method="contractDel">
+        </action>
+        <action name="contractAdd" class="contractAction" method="contractAdd">
+        </action>
+         
+         <action name="contractEdit" class="contractAction" method="contractEdit">
+        </action>
+        
+        <action name="contractShenpi" class="contractAction" method="contractShenpi">
+        </action>
+        <action name="contractDetail" class="contractAction" method="contractDetail">
+              <result name="success">/admin/contractEdit.jsp</result>
+        </action> 
+        
+         <action name="contractDetail2" class="contractAction" method="contractDetail">
+              <result name="success">/admin/contractDetail.jsp</result>
+        </action> 
+        
+        <action name="getAllAvaiableContract" class="contractAction" method="getAllAvaiableContract">
+        </action> 
+         
+        <action name="clientManage" class="clientAction" method="clientManage">
+            <result name="success">/admin/clientList.jsp</result>
+        </action>
+        <action name="clientDel" class="clientAction" method="clientDel">
+        </action>
+        <action name="clientAdd" class="clientAction" method="clientAdd">
+        </action>
+         <action name="clientDetail" class="clientAction" method="contractDetail">
+            <result name="success">/admin/clientEdit.jsp</result>
+        </action>
+         
+         
+         <action name="clientEdit" class="clientAction" method="clientEdit">
+         </action>
+         
+         
+        <action name="artistManage" class="artistAction" method="artistManage">
+            <result name="success">/admin/artistList.jsp</result>
+        </action>
+        <action name="artistDel" class="artistAction" method="artistDel">
+        </action>
+        <action name="artistAdd" class="artistAction" method="artistAdd">
+        </action>
+         <action name="artistEdit" class="artistAction" method="artistEdit">
+        </action>
+        <action name="artistDetail" class="artistAction" method="artistDetail">
+            <result name="success">/admin/artistEdit.jsp</result>
+        </action>
+        
+        
+        
+        <action name="authorityManage" class="authorityAction" method="authorityManage">
+            <result name="success">/admin/authorityList.jsp</result>
+        </action>
+        <action name="authorityDel" class="authorityAction" method="authorityDel">
+        </action>
+        <action name="authorityAdd" class="authorityAction" method="authorityAdd">
+        </action>
+        <action name="authorityEdit" class="authorityAction" method="authorityEdit">
+        </action>
+        <action name="authorityDetail" class="authorityAction" method="authorityDetail">
+            <result name="success">/admin/authorityEdit.jsp</result>
+        </action>   
+    </package>
+</struts>
